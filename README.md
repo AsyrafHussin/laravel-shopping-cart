@@ -3,25 +3,25 @@
 Shopping cart for Laravel Application.
 
 
-[![Build Status](https://travis-ci.org/overtrue/laravel-shopping-cart.svg?branch=master)](https://travis-ci.org/overtrue/laravel-shopping-cart)
-[![Latest Stable Version](https://poser.pugx.org/overtrue/laravel-shopping-cart/v/stable.svg)](https://packagist.org/packages/overtrue/laravel-shopping-cart)
-[![Latest Unstable Version](https://poser.pugx.org/overtrue/laravel-shopping-cart/v/unstable.svg)](https://packagist.org/packages/overtrue/laravel-shopping-cart)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/overtrue/laravel-shopping-cart/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/overtrue/laravel-shopping-cart/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/overtrue/laravel-shopping-cart/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/overtrue/laravel-shopping-cart/?branch=master)
-[![Total Downloads](https://poser.pugx.org/overtrue/laravel-shopping-cart/downloads)](https://packagist.org/packages/overtrue/laravel-shopping-cart)
-[![License](https://poser.pugx.org/overtrue/laravel-shopping-cart/license)](https://packagist.org/packages/overtrue/wechat)
+[![Build Status](https://travis-ci.org/AsyrafHussin/laravel-shopping-cart.svg?branch=master)](https://travis-ci.org/AsyrafHussin/laravel-shopping-cart)
+[![Latest Stable Version](https://poser.pugx.org/AsyrafHussin/laravel-shopping-cart/v/stable.svg)](https://packagist.org/packages/AsyrafHussin/laravel-shopping-cart)
+[![Latest Unstable Version](https://poser.pugx.org/AsyrafHussin/laravel-shopping-cart/v/unstable.svg)](https://packagist.org/packages/AsyrafHussin/laravel-shopping-cart)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/AsyrafHussin/laravel-shopping-cart/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/AsyrafHussin/laravel-shopping-cart/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/AsyrafHussin/laravel-shopping-cart/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/AsyrafHussin/laravel-shopping-cart/?branch=master)
+[![Total Downloads](https://poser.pugx.org/AsyrafHussin/laravel-shopping-cart/downloads)](https://packagist.org/packages/AsyrafHussin/laravel-shopping-cart)
+[![License](https://poser.pugx.org/AsyrafHussin/laravel-shopping-cart/license)](https://packagist.org/packages/AsyrafHussin/wechat)
 
 # Installation
 
 ```shell
-$ composer require "overtrue/laravel-shopping-cart:~2.0"
+$ composer require "AsyrafHussin/laravel-shopping-cart:~2.0"
 ```
 
   or add the following line to your project's `composer.json`:
 
 ```json
 "require": {
-    "overtrue/laravel-shopping-cart": "~2.0"
+    "AsyrafHussin/laravel-shopping-cart": "~2.0"
 }
 ```
 
@@ -34,13 +34,13 @@ $ composer update
 After completion of the above, add the follow line to the section `providers` of `config/app.php`:
 
 ```php
-Overtrue\LaravelShoppingCart\ServiceProvider::class,
+AsyrafHussin\LaravelShoppingCart\ServiceProvider::class,
 ```
 
 And add the follow line to the section `aliases`:
 
 ```php
-'ShoppingCart'      => Overtrue\LaravelShoppingCart\Facade::class,
+'ShoppingCart'      => AsyrafHussin\LaravelShoppingCart\Facade::class,
 ```
 
 # Usage
@@ -252,9 +252,9 @@ $item->product->name; // $item->product is instanceof 'App\Models\Product'
 
 # The Collection And Item
 
-`Collection` and `Overtrue\LaravelShoppingCart\Item` are instanceof `Illuminate\Support\Collection`, Usage Refer to：[Collections - Laravel doc.](http://laravel.com/docs/5.0/collections)
+`Collection` and `AsyrafHussin\LaravelShoppingCart\Item` are instanceof `Illuminate\Support\Collection`, Usage Refer to：[Collections - Laravel doc.](http://laravel.com/docs/5.0/collections)
 
-properties of `Overtrue\LaravelShoppingCart\Item`:
+properties of `AsyrafHussin\LaravelShoppingCart\Item`:
 
 - `id`       - your goods item ID.
 - `name`     - Name of item.

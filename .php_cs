@@ -3,9 +3,9 @@
 $year = date('Y');
 
 $header = <<<EOF
-This file is part of the overtrue/laravel-shopping-cart.
+This file is part of the AsyrafHussin/laravel-shopping-cart.
 
-(c) $year overtrue <i@overtrue.me>
+(c) $year AsyrafHussin <i@AsyrafHussin.me>
 EOF;
 
 Symfony\CS\Fixer\Contrib\HeaderCommentFixer::setHeader($header);

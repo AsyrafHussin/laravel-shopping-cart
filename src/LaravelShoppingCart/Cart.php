@@ -1,19 +1,19 @@
 <?php
 
 /*
- * This file is part of the overtrue/laravel-shopping-cart.
+ * This file is part of the AsyrafHussin/laravel-shopping-cart.
  *
- * (c) 2016 overtrue <i@overtrue.me>
+ * (c) 2016 AsyrafHussin <i@AsyrafHussin.me>
  */
 
-namespace Overtrue\LaravelShoppingCart;
+namespace AsyrafHussin\LaravelShoppingCart;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\Collection;
 
 /**
- * Main class of Overtrue\LaravelShoppingCart package.
+ * Main class of AsyrafHussin\LaravelShoppingCart package.
  */
 class Cart
 {
@@ -113,13 +113,13 @@ class Cart
     {
         $cart = $this->getCart();
 
-        $this->event->fire('shopping_cart.adding', [$attributes, $cart]);
+        $this->event->dispatch('shopping_cart.adding', [$attributes, $cart]);
 
         $row = $this->addRow($id, $name, $qty, $price, $attributes);
 
         $cart = $this->getCart();
 
-        $this->event->fire('shopping_cart.added', [$attributes, $cart]);
+        $this->event->dispatch('shopping_cart.added', [$attributes, $cart]);
 
         return $row;
     }
@@ -140,7 +140,7 @@ class Cart
 
         $cart = $this->getCart();
 
-        $this->event->fire('shopping_cart.updating', [$row, $cart]);
+        $this->event->dispatch('shopping_cart.updating', [$row, $cart]);
 
         if (is_array($attribute)) {
             $raw = $this->updateAttribute($rawId, $attribute);
@@ -148,7 +148,7 @@ class Cart
             $raw = $this->updateQty($rawId, $attribute);
         }
 
-        $this->event->fire('shopping_cart.updated', [$row, $cart]);
+        $this->event->dispatch('shopping_cart.updated', [$row, $cart]);
 
         return $raw;
     }
@@ -168,11 +168,11 @@ class Cart
 
         $cart = $this->getCart();
 
-        $this->event->fire('shopping_cart.removing', [$row, $cart]);
+        $this->event->dispatch('shopping_cart.removing', [$row, $cart]);
 
         $cart->forget($rawId);
 
-        $this->event->fire('shopping_cart.removed', [$row, $cart]);
+        $this->event->dispatch('shopping_cart.removed', [$row, $cart]);
 
         $this->save($cart);
 
@@ -202,11 +202,11 @@ class Cart
     {
         $cart = $this->getCart();
 
-        $this->event->fire('shopping_cart.destroying', $cart);
+        $this->event->dispatch('shopping_cart.destroying', $cart);
 
         $this->save(null);
 
-        $this->event->fire('shopping_cart.destroyed', $cart);
+        $this->event->dispatch('shopping_cart.destroyed', $cart);
 
         return true;
     }

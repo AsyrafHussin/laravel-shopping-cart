@@ -1,5 +1,5 @@
 {
-    "name": "overtrue/laravel-shopping-cart",
+    "name": "AsyrafHussin/laravel-shopping-cart",
     "description": "Shopping cart for Laravel Application.",
     "keywords": [
         "shopping cart",
@@ -8,7 +8,7 @@
     ],
     "authors": [
         {
-            "name": "overtrue",
+            "name": "AsyrafHussin",
             "email": "anzhengchao@gmail.com"
         }
     ],
@@ -22,17 +22,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Overtrue\\LaravelShoppingCart\\": "src/LaravelShoppingCart/"
+            "AsyrafHussin\\LaravelShoppingCart\\": "src/LaravelShoppingCart/"
         }
     },
     "license": "MIT",
     "extra": {
         "laravel": {
             "providers": [
-                "Overtrue\\LaravelShoppingCart\\ServiceProvider"
+                "AsyrafHussin\\LaravelShoppingCart\\ServiceProvider"
             ],
             "aliases": {
-                "ShoppingCart": "Overtrue\\LaravelShoppingCart\\Facade"
+                "ShoppingCart": "AsyrafHussin\\LaravelShoppingCart\\Facade"
             }
         }
     }

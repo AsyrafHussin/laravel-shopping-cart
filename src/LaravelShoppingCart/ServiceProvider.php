@@ -1,12 +1,12 @@
 <?php
 
 /*
- * This file is part of the overtrue/laravel-shopping-cart.
+ * This file is part of the AsyrafHussin/laravel-shopping-cart.
  *
- * (c) 2016 overtrue <i@overtrue.me>
+ * (c) 2016 AsyrafHussin <i@AsyrafHussin.me>
  */
 
-namespace Overtrue\LaravelShoppingCart;
+namespace AsyrafHussin\LaravelShoppingCart;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 

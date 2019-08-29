@@ -1,7 +1,7 @@
 <?php
 
 use Mockery as m;
-use Overtrue\LaravelShoppingCart\Cart;
+use AsyrafHussin\LaravelShoppingCart\Cart;
 use Illuminate\Support\Collection;
 
 class CartTest extends PHPUnit_Framework_TestCase
@@ -34,9 +34,9 @@ class CartTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals('shopping_cart.default', $this->cart->getName());
 
-        $this->cart->name('overtrue');
+        $this->cart->name('AsyrafHussin');
 
-        $this->assertEquals('shopping_cart.overtrue', $this->cart->getName());
+        $this->assertEquals('shopping_cart.AsyrafHussin', $this->cart->getName());
     }
 
     /**
@@ -46,7 +46,7 @@ class CartTest extends PHPUnit_Framework_TestCase
     {
         $row = $this->cart->add(1, 'foo', 5, 100.00);
 
-        $this->assertEquals('Overtrue\LaravelShoppingCart\Item', get_class($row));
+        $this->assertEquals('AsyrafHussin\LaravelShoppingCart\Item', get_class($row));
         $this->assertEquals('foo', $row->name);
         $this->assertEquals(5, $row->qty);
         $this->assertEquals(100.00, $row->price);
@@ -64,7 +64,7 @@ class CartTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(100.00, $row->price);
         $this->assertEquals(1000.00, $row->total);
 
-        // https://github.com/overtrue/laravel-shopping-cart/issues/2
+        // https://github.com/AsyrafHussin/laravel-shopping-cart/issues/2
         $this->cart->clean();
         $this->cart->add(37, 'Item name', 5, 100.00, ['color' => 'red', 'size' => 'M']);
         $this->cart->add(37, 'Item name', 1, 100.00, ['color' => 'red', 'size' => 'M']);
@@ -78,7 +78,7 @@ class CartTest extends PHPUnit_Framework_TestCase
     /**
      * test add() with bad quantity.
      *
-     * @expectedException \Overtrue\LaravelShoppingCart\Exception
+     * @expectedException \AsyrafHussin\LaravelShoppingCart\Exception
      */
     public function testAddBadQty()
     {
@@ -88,7 +88,7 @@ class CartTest extends PHPUnit_Framework_TestCase
     /**
      * test add() with bad price.
      *
-     * @expectedException \Overtrue\LaravelShoppingCart\Exception
+     * @expectedException \AsyrafHussin\LaravelShoppingCart\Exception
      */
     public function testAddBadPrice()
     {
@@ -141,7 +141,7 @@ class CartTest extends PHPUnit_Framework_TestCase
     /**
      * test update() with non-exists raw id.
      *
-     * @expectedException \Overtrue\LaravelShoppingCart\Exception
+     * @expectedException \AsyrafHussin\LaravelShoppingCart\Exception
      */
     public function testUpdateBadRawId()
     {
@@ -281,7 +281,7 @@ class CartTest extends PHPUnit_Framework_TestCase
     /**
      * test associate() with non-exists model name.
      *
-     * @expectedException \Overtrue\LaravelShoppingCart\Exception
+     * @expectedException \AsyrafHussin\LaravelShoppingCart\Exception
      */
     public function testBadModelName()
     {
