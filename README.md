@@ -14,14 +14,14 @@ Shopping cart for Laravel Application.
 # Installation
 
 ```shell
-$ composer require "AsyrafHussin/laravel-shopping-cart:~2.0"
+$ composer require "asyrafhussin/laravel-shopping-cart:~2.0.2@dev"
 ```
 
   or add the following line to your project's `composer.json`:
 
 ```json
 "require": {
-    "AsyrafHussin/laravel-shopping-cart": "~2.0"
+    "asyrafhussin/laravel-shopping-cart": "~2.0.2@dev"
 }
 ```
 
